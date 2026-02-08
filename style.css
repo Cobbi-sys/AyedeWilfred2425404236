@@ -314,7 +314,7 @@ h2 {
 
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
 
     .TheMistressImage {
         position: absolute;
@@ -330,9 +330,9 @@ h2 {
         position: absolute;
         height: 500px;
         padding: 5px;
-        margin-top: 300px;
+        margin-top: 1970px;
         grid-template-columns: repeat(2, 1fr);
-        margin-left: 200px;
+        margin-left: 410px;
         width: 40%;
     }
 
@@ -344,7 +344,7 @@ h2 {
         position: relative;
         height: 600px;
         padding: 5px;
-        margin-left: 20px;
+        margin-left: 350px;
         grid-template-columns: repeat(3, 1fr);
         /*border-radius: 17px;*/
         /*box-shadow: 0 10px 300px rgba(0, 0, 0, 0.2);*/
@@ -1287,11 +1287,4 @@ h2 {
     margin-bottom: 20px;
     font-size: 0.9rem;
     color: #666;
-
 }
-
-
-
-
-
-
