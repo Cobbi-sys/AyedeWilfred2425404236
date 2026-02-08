@@ -314,7 +314,7 @@ h2 {
 
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 768px) {
 
     .TheMistressImage {
         position: absolute;
@@ -1289,5 +1289,6 @@ h2 {
     color: #666;
 
 }
+
 
 
