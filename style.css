@@ -5,7 +5,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url("Oak.jpg");
+    background-image: url("/images/Oak.jpg");
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
