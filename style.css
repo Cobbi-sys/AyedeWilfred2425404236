@@ -344,7 +344,7 @@ h2 {
         position: relative;
         height: 600px;
         padding: 5px;
-        margin-left: 100px;
+        margin-left: 50px;
         grid-template-columns: repeat(3, 1fr);
         /*border-radius: 17px;*/
         /*box-shadow: 0 10px 300px rgba(0, 0, 0, 0.2);*/
@@ -1289,4 +1289,5 @@ h2 {
     color: #666;
 
 }
+
 
