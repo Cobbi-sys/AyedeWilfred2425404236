@@ -5,7 +5,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url("/images/Oak.jpg");
+    background-image: url("Oak.jpg");
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -1288,3 +1288,4 @@ h2 {
     font-size: 0.9rem;
     color: #666;
 }
+
