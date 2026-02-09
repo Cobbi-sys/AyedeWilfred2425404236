@@ -1334,7 +1334,7 @@ h2 {
 
     .About {
         text-align: center;
-        font-size: 1.0em;
+        font-size: 0.3em;
         color: rgb(0, 0, 0);
         background-color: rgba(45, 143, 240, 0.9);
         padding: 20px;
@@ -1360,7 +1360,7 @@ h2 {
 
     .main h1 {
         text-align: center;
-        font-size: 0.5em;
+        font-size: 0.3em;
         color: rgb(0, 0, 0);
         background-color: rgba(45, 143, 240, 0.9);
         padding: 20px;
