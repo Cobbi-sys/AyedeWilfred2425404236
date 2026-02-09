@@ -5,7 +5,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url("Oak.jpg");
+    background-image: url("/images/Oak.jpg");
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -76,15 +76,6 @@ nav a:hover {
     }
 }
 
-@media screen and (max-width: 480px) {
-    .nav-container {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1px;
-        width: 100%;
-        padding-top: 20px;
-    }
-}
 .image-wrapper {
     position: relative;
     height: 500px;
@@ -157,13 +148,6 @@ nav a:hover {
 }
 
 @media (max-width: 800px) {
-    .grid-2-column {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-        padding: 10px;
-    }
-
-    @media (max-width: 480px) {
     .grid-2-column {
         grid-template-columns: repeat(3, 1fr);
         gap: 10px;
@@ -381,58 +365,6 @@ h2 {
     }
 }
 
-
-@media screen and (max-width: 480px) {
-
-    .TheMistressImage {
-        position: absolute;
-        height: 500px;
-        padding: 5px;
-        margin-top: 999px;
-        grid-template-columns: repeat(2, 1fr);
-        margin-left: 45px;
-        width: 40%;
-    }
-
-    .ThePastor {
-        position: absolute;
-        height: 500px;
-        padding: 5px;
-        margin-top: 1970px;
-        grid-template-columns: repeat(2, 1fr);
-        margin-left: 410px;
-        width: 40%;
-    }
-
-    .mission {
-        text-align: justify;
-        font-style: italic;
-        font-size: 1.3em;
-        line-height: 1.6em;
-        position: relative;
-        height: 600px;
-        padding: 5px;
-        margin-left: 350px;
-        grid-template-columns: repeat(3, 1fr);
-        /*border-radius: 17px;*/
-        /*box-shadow: 0 10px 300px rgba(0, 0, 0, 0.2);*/
-        width: 50%;
-    }
-
-    .vision {
-        text-align: justify;
-        font-size: 1.3em;
-        font-style: italic;
-        line-height: 1.6em;
-        position: relative;
-        height: 600px;
-        padding: 5px;
-        grid-template-columns: repeat(2, 1fr);
-        margin-left: 30px;
-        width: 50%;
-    }
-}
-
 .heading1 {
     text-align: center;
     margin-top: 50px;
@@ -527,12 +459,6 @@ h2 {
 }
 
 /* Mobile Fixes */
-@media (max-width: 768px) {
-    .testimonial-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 @media (max-width: 768px) {
     .testimonial-grid {
         grid-template-columns: 1fr;
@@ -665,14 +591,6 @@ h2 {
     }
 }
 
-@media (max-width: 480px) {
-    .principal-message .grid-2-column {
-        display: flex;
-        flex-direction: column-reverse;
-        /* Put image under text on mobile */
-    }
-}
-
 /* Admission Steps Styling */
 .admission-process {
     padding: 60px 0;
@@ -784,34 +702,6 @@ h2 {
         border-bottom: 1px inset #eee;
     }
 }
-
-@media (max-width: 480px) {
-    .grid-3-col {
-        grid-template-columns: 1fr;
-    }
-
-    .download-box {
-        background: #003366;
-        color: white;
-        padding: 40px;
-        margin-left: 300px;
-        border-radius: 15px;
-        text-align: center;
-        width: 50%;
-    }
-
-    .req-list ul {
-        list-style-type: none;
-        padding: 10px;
-        text-align: left;
-    }
-
-    .req-list li {
-        padding: 10px 0;
-        border-bottom: 1px inset #eee;
-    }
-}
-
 
 /* Academic Section Styling */
 .academics-section {
@@ -1053,12 +943,6 @@ h2 {
     }
 }
 
-@media (max-width: 480px) {
-    .grid-3-col {
-        grid-template-columns: 1fr;
-    }
-}
-
 /* Contact Section Layout */
 .contact-section {
     padding: 80px 0;
@@ -1158,23 +1042,6 @@ h2 {
     }
 }
 
-@media (max-width: 480px) {
-    .contact-section .grid-2-column {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-form-container {
-        background: #003366;
-        /* School Blue */
-        padding: 40px;
-        border-radius: 20px;
-        color: white;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        margin-left: 0;
-
-    }
-}
-
 /* Announcements Section Styling */
 .announcements-section {
     padding: 80px 0;
@@ -1242,16 +1109,6 @@ h2 {
 }
 
 @media (max-width: 600px) {
-    .notice-item {
-        flex-direction: column;
-    }
-
-    .notice-tag {
-        margin-bottom: 10px;
-    }
-}
-
-@media (max-width: 480px) {
     .notice-item {
         flex-direction: column;
     }
@@ -1432,4 +1289,128 @@ h2 {
     color: #666;
 }
 
+/* MOBILE OVERRIDE: This kicks in for phones like the Samsung A05/A06 */
+@media screen and (max-width: 900px) {
 
+    /* 1. Reset the Background */
+    body {
+        background-attachment: scroll !important; /* Fixed breaks on Android */
+        display: block; /* Overrides the flex that might squash things */
+        background-color: rgb(232, 239, 242);
+    }
+
+    /* 2. Fix the Overlapping Sections */
+    /* We turn off 'absolute' and 'margins' so they stack instead of crashing */
+    .mission, .vision { 
+        position: static !important; 
+        margin-left: auto !important; 
+        margin-right: auto !important;
+        margin-top: 10px !important;
+        width: auto !important;
+        height: auto !important;
+        text-align: center;
+    }
+
+
+    .TheMistressImage{
+        position: static !important; 
+        margin-left: auto !important; 
+        margin-right: auto !important;
+        margin-top: 1px !important;
+        width: 70% !important;
+        height: 500px !important;
+        text-align: center;
+    }
+
+    .ThePastor {
+        position: static !important; 
+        margin-left: auto !important; 
+        margin-right: auto !important;
+        margin-top: 10px !important;
+        width: 70% !important;
+        height: 300px !important;
+        text-align: center;
+    }
+
+    .About {
+        text-align: center;
+        font-size: 1.6em;
+        color: rgb(0, 0, 0);
+        background-color: rgba(45, 143, 240, 0.9);
+        padding: 20px;
+    }
+
+    .academic-card {
+        background: #f4f7f6;
+        padding: 30px;
+        border-radius: 15px;
+        border-top: 5px solid #003366;
+        text-align: center;
+        margin-left: 10px;
+    }
+
+    .main h1 {
+        text-align: center;
+        font-size: 1.2em;
+        color: rgb(0, 0, 0);
+        background-color: rgba(45, 143, 240, 0.9);
+        padding: 20px;
+    }
+
+    .nav-container {
+        display: flex;
+        justify-content: center;
+        background-color: rgba(45, 143, 240, 0.9);
+        padding: 15px 0;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        flex-wrap: wrap;
+        margin-top: 40px;
+    }
+
+    /* 3. Fix the Navigation */
+    .nav-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) !important; /* 2 columns is better than 4 for phones */
+        gap: 10px;
+    }
+
+    /* 4. Fix the Contact Form */
+    .contact-form-container {
+        margin-left: 0 !important; /* Removes the 100% margin that pushed it off-screen */
+        width: 100% !important;
+    }
+
+    /* 5. Scale the Hero Images */
+    .image-wrapper {
+        height: 250px !important; /* Shorter for vertical screens */
+    }
+
+    .download-box {
+        background: #003366;
+        color: white;
+        padding: 40px;
+        margin-left: 100px;
+        border-radius: 15px;
+        text-align: center;
+        width: 90%;
+    }
+    
+    .download-btn {
+        display: block;
+        background: white;
+        color: #003366;
+        padding: 10px;
+        margin-top: 15px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+    
+    .download-btn:hover {
+        background: #ffcc00;
+        transform: scale(1.02);
+    }
+}
